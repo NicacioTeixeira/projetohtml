@@ -1,3 +1,7 @@
+
+body{
+  background-color: #EBEBEB;
+}
 .menu_principal{
 
   list-style-type: none; 
@@ -24,4 +28,26 @@ a:link{
 a:hover{
     color:black
 }
-body{}
+.barcoprincipal{
+  position: relative;
+  top: 60px;
+}
+
+.texto_topo {
+
+  color: #21272B; 
+  line-height: 0.5;
+  position: fixed;
+  top: 0;
+  right:0;
+  left:75px;
+  width: 100%;
+  background-color: white;  
+  text-align: left;
+  z-index: 999;
+
+}
+
+
+
+
