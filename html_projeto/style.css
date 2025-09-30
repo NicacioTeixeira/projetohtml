@@ -1,43 +1,67 @@
+
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
+    margin: 0;                /* Remove margens padrão */
+    padding: 0;               /* Remove espaçamentos padrão */
+    box-sizing: border-box;   /* Inclui padding e border na largura e altura dos elementos */
+    text-decoration: none;    /* Remove sublinhado dos links */
+    border: none;             /* Remove bordas padrão */
+    outline: none;            /* Remove contorno padrão */
+    scroll-behavior: smooth;  /* Suaviza o scroll ao clicar em links de âncora */ 
 }
 
 :root{
-    --bg-color:#EBEBEB;
-    --top-color: #21272B;
-    --text-color-menu:#FFFFFF;
+
+    --bg-color:#EBEBEB;                  /* Cor de fundo da página */
+    --top-color: #21272B;                /* Cor do topo (menu) */
+    --text-color-menu:#FFFFFF;          /* Cor do texto do menu */
     --text-color-menu-ahouver:#1BB4E8;
+    --text-color-marron:#C6B07F;  /* Cor do texto do menu ao passar o mouse */
 }
 
 body{
+  
+  background-color: var(--bg-color);
+   
+}
 
-    background-color: var(--bg-color);
-    color: var(--text-color);
+.barco_topo{
+
+  position:absolute; /* Tira a imagem do fluxo e permite que ela seja posicionada */
+  top: 5px; /* Define onde ela deve aparecer na tela */
+  left: 100px; /* Por exemplo, 20px da borda esquerda */
+  width: 60px; /* Define a largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  
+
+}
+
+.texto_topo{
+
+position: absolute; /* Tira a imagem do fluxo e permite que ela seja posicionada */
+top: 28px; /* Define onde ela deve aparecer na tela */
+left: 170px; /* Por exemplo, 20px da borda esquerda */
+color: var(--text-color-menu-ahouver);
+
+}
+
+.texto_topo h1{
+
+  color: var(--text-color-menu); /* Cor do texto do menu */
 
 }
 
 .header{
 
-  position: fixed;
-  top: 0;
-
-}
-
-.nav_bar{
-
-  height: 4rem;
-  width:100rem;
-  height: 5rem;
-  width: 100rem;
+  top: 0; /* Fixa o menu no topo da página */
+  margin: 0 auto; /* Centraliza o menu horizontalmente */
   background-color: var(--top-color);
-  margin-right: 0px;
-
+  width: 90%; /* Largura total da tela */
+  height: 6rem;  /* Altura do menu */
+  padding-top: 4rem; /* Espaçamento interno do menu */
+  display: flex;    /* Habilita o Flexbox no pai para controlar a posição dos filhos (o menu) */
+  justify-content: center; /* Alinha o menu ao centro */
+  
 }
 
 .menu_principal{
@@ -47,22 +71,116 @@ body{
   font-size: large;
   height: 20px;
   width: 550px;
-  background-color: #1BB4E8;
+  padding: 0 30px; /* Espaçamento interno do menu */
+  justify-content:left; /* Alinha os itens do menu à esquerda */
+  color: var(--bg-color);
    
 }
 
 .menu_principal li{
 
-  margin-right: 3rem;
+  padding: 0 4rem; /* Espaçamento entre os itens do menu */
 
 }
 
 a{
-  color: var(--text-color-menu)
+  color: var(--text-color-menu); /* Cor do texto do menu */
 }
 
 a:hover{
-  color:var(--text-color-menu-ahouver)
+  color:var(--text-color-menu-ahouver); /* Cor do texto do menu ao passar o mouse */
+}
+
+.container{
+
+  margin: 0 auto; /* Centraliza o container horizontalmente */
+  margin-top: 30px; /* Espaçamento superior para evitar sobreposição com o menu fixo */
+  background-color: var(--text-color-menu);
+  width: 90%; /* Largura do container */
+  min-height: 100vh; /* Altura mínima para ocupar a tela inteira */
+  padding-bottom: 150px; /* Espaçamento inferior para evitar sobreposição com o footer */
+  position: relative;
+  z-index: 1; /* Garante que o container fique na camada inferior ao footer */
+
+}
+
+.imagem_destaque{
+
+  width: 100%; /* Largura total do container */
+  height: auto; /* Mantém a proporção da imagem */  
+
+}
+
+.pai_cards{
+
+  display: flex; /* Habilita o Flexbox no pai para controlar a posição dos filhos (os cards) */
+  justify-content: center; /* Alinha os cards ao centro */
+  margin-top: 5px; /* Espaçamento superior para separar da imagem de destaque */
+  gap: 0; /* Espaçamento entre os cards */
+}
+
+.card_destaque{
+
+  background-color: var(--bg-color);
+  margin: 20px auto; /* Centraliza o card horizontalmente */
+  width: 48%; /* Largura do card, em relação ao container pricipal*/
+  height: auto;
+  
+}
+
+.card_top1{
+
+  display: flex;
+  text-align: left; /* Centraliza o texto */
+  margin-bottom: 20px; /* Espaçamento inferior para separar do conteúdo abaixo */
+  height: 55px; /* Altura do card */    
+  background-color: var(--text-color-menu-ahouver);
+  color: var(--text-color-menu); /* Cor do texto do menu */
+  
+}
+
+.card_top1 h2{
+
+  padding: 15px; /* Espaçamento interno do título */
+  
+}
+
+.card_top2{
+
+  display: flex;
+  text-align: left; /* Centraliza o texto */
+  margin-bottom: 20px; /* Espaçamento inferior para separar do conteúdo abaixo */
+  height: 55px; /* Altura do card */            
+  background-color: var(--text-color-marron);
+  color: var(--text-color-menu); /* Cor do texto do menu */
+  
+}
+
+.card_top2 h2{
+
+  padding: 15px; /* Espaçamento interno do título */
+  
+}
+
+/* AQUI COMEÇA O ESTILO DO FOOTER */
+.footer {
+
+  position: relative; /* Permite o controle de z-index */
+  text-align: center; /* Centraliza o texto */
+  width: 100%;
+  background-color: var(--top-color); /* Fundo escuro de ponta a ponta */
+  background-color: rgba(33, 39, 43, 0.5); /* Fundo escuro de ponta a ponta com transparência */
+  margin-top: -100px; /* Espaçamento superior para separar do conteúdo acima */
+  z-index: 10;/* Garante que o footer fique na camada superior ao container */
+  padding: 40px 0; /* Espaçamento interno do footer */
+
+}
+
+/* Estilo para o parágrafo de direitos autorais */
+.footer p {
+  color: var(--text-color-menu); /* Cor da fonte branca */
+  margin: 0; /* Remove margens padrão */ 
+  font-size: 0.9rem; /* Tamanho da fonte */
 }
 
 
