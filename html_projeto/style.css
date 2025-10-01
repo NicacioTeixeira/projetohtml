@@ -110,11 +110,11 @@ a:hover{
     
     position: absolute; /* 1. Tira do fluxo e o posiciona em relação ao .container */
     z-index: 5; /* 2. Coloca em uma camada superior à imagem */
-    left: 75%;/* 3. Centraliza horizontalmente sobre a imagem */
+    left: 80%;/* 3. Centraliza horizontalmente sobre a imagem */
     transform: translateX(-50%); /* Ajusta o posicionamento horizontal para centralizar */ 
-    top: 50px; /* 4. Define o posicionamento vertical (ex: no topo da imagem) */
-    width: 20%; /* Largura do quadro  */
-    padding: 20px;  /* Espaçamento interno do quadro */
+    top: 450px; /* 4. Define o posicionamento vertical  */
+    width: 30%; /* Largura do quadro  */
+    padding: 20px;  /* Espaçamento interno do quadro */    
     color: var(--text-color-menu);
     background-color: rgba(26, 50, 67, 1.0);
     text-align:left/* Centraliza o texto */
