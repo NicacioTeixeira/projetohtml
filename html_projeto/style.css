@@ -17,6 +17,7 @@
     --text-color-menu:#FFFFFF;          /* Cor do texto do menu */
     --text-color-menu-ahouver:#1BB4E8;
     --text-color-marron:#C6B07F;  /* Cor do texto do menu ao passar o mouse */
+    --color-destaque:#1A3243;            /* Cor de destaque */
 }
 
 body{
@@ -104,10 +105,33 @@ a:hover{
 
 }
 
+/* QUADRO DE DESTAQUE: Sobreposição e Posicionamento */
+.quadro_destaque {
+    
+    position: absolute; /* 1. Tira do fluxo e o posiciona em relação ao .container */
+    z-index: 5; /* 2. Coloca em uma camada superior à imagem */
+    left: 75%;/* 3. Centraliza horizontalmente sobre a imagem */
+    transform: translateX(-50%); /* Ajusta o posicionamento horizontal para centralizar */ 
+    top: 50px; /* 4. Define o posicionamento vertical (ex: no topo da imagem) */
+    width: 20%; /* Largura do quadro  */
+    padding: 20px;  /* Espaçamento interno do quadro */
+    color: var(--text-color-menu);
+    background-color: rgba(26, 50, 67, 1.0);
+    text-align:left/* Centraliza o texto */
+ 
+}
+
+.barco_destaque{
+  
+  display: block; /* Remove espaçamento embaixo da imagem */
+  margin-top: 2rem; /* Espaçamento superior para separar do texto */
+}
+
 .imagem_destaque{
 
   width: 100%; /* Largura total do container */
   height: auto; /* Mantém a proporção da imagem */  
+  display: block; /* Remove espaçamento embaixo da imagem */
 
 }
 
