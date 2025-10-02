@@ -112,8 +112,8 @@ a:hover{
     z-index: 5; /* 2. Coloca em uma camada superior à imagem */
     left: 80%;/* 3. Centraliza horizontalmente sobre a imagem */
     transform: translateX(-50%); /* Ajusta o posicionamento horizontal para centralizar */ 
-    top: 450px; /* 4. Define o posicionamento vertical  */
-    width: 30%; /* Largura do quadro  */
+    top: 600px; /* 4. Define o posicionamento vertical  */
+    width: 25%; /* Largura do quadro  */
     padding: 20px;  /* Espaçamento interno do quadro */    
     color: var(--text-color-menu);
     background-color: rgba(26, 50, 67, 1.0);
@@ -121,10 +121,25 @@ a:hover{
  
 }
 
+.texto_destaque1{
+
+  margin-left: 50px;  /* Espaçamento à esquerda para separar da borda do quadro */
+  margin-top: 10px;  
+
+}
+
+.texto_destaque2{
+
+  margin-left: 50px;  /* Espaçamento à esquerda para separar da borda do quadro */
+  margin-top: -50px;
+
+}
+
 .barco_destaque{
   
   display: block; /* Remove espaçamento embaixo da imagem */
   margin-top: 2rem; /* Espaçamento superior para separar do texto */
+  width: 7%; /* Largura total do container */
 }
 
 .imagem_destaque{
